@@ -19,20 +19,20 @@ def type_check(valid_type: int | str, datatype: int | str) -> bool:
 def check_length(inp: int | str, min_len, max_len, datatype: int | str) -> bool:
     if datatype == str:
         if len(inp) < min_len:
-            print(f"\nThe length of the string you entered {inp} is less than the minimum length allocated.")
+            print(f"\nThe length of the value you entered {inp} is less than the minimum length.")
             return False
         elif len(inp) > max_len:
-            print(f"\nThe length of the string you entered {inp} is more than the maximum length allocated.")
+            print(f"\nThe length of the value you entered {inp} is more than the maximum length.")
             return False
         else:
             return True
     
     else:
         if inp < min_len:
-            print(f"\nThe length of the integer you entered {inp} is less than the minimum value allocated.")
+            print(f"\nThe value you entered {inp} is less than the minimum value.")
             return False
         elif inp > max_len:
-            print(f"\nThe length of the integer you entered {inp} is more than the maximum value allocated.")
+            print(f"\nThe value you entered {inp} is more than the maximum value.")
             return False
         else:
             return True

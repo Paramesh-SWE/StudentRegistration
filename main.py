@@ -24,21 +24,22 @@ def add_student() -> Student:
     print(f"\nStudent Info: {student.get_student_details()}")
     return student
 
-print("Welcome to Student Login Database!")
-print("1. Add Students,\n2. Enquire Student details\n")
-print("Type 1 or 2 to move forward.")
-
+students_list = []
 while True:
     try:
+        print("\nWelcome to Student Login Database!")
+        print("1. Add Students\n2. Enquire Student details\n")
+        print("Type 1 or 2 to move forward.\n")
         inp = int(input("Please enter the action number: "))
     except ValueError:
         print("\nPlease enter a valid number.\n")  
-    else:     
+    else:    
         if inp == 1:
-            student_details = add_student()
-            break
+            students_list.append(add_student())
         elif inp == 2:
-            pass
-            break
+            if len(students_list) > 0:
+                pass
+            else:
+                print(f"Please students before to enquire.")
         else:
             print("\nPlease enter either 1 or 2.\n")
