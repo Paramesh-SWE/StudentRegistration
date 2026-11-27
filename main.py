@@ -37,7 +37,7 @@ def get_student_info(students_list: List[Student]) -> str:
                 if student_id == student.id:
                     return f"\nName: {student.name.capitalize()}\nClass: {student.class_room}\nID: {student.id}"
                 else:
-                    print("\nThe entered {student_id} is not present in the database.")
+                    print(f"\nThe entered {student_id} is not present in the database.")
 
 #Main
 students_list = []
